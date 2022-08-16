@@ -10,7 +10,9 @@ let sec = 0;
 
 let interval;
 
-start.addEventListener("click", function () {
+start.addEventListener("click", starter);
+
+function starter() {
   interval = setInterval(function () {
     if (sec < 59) {
       sec += 1;
@@ -29,7 +31,8 @@ start.addEventListener("click", function () {
   }, 1000);
 
   start.style.pointerEvents = "none";
-});
+}
+
 
 stop.addEventListener("click", function () {
   clearInterval(interval);
