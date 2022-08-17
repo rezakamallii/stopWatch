@@ -10,26 +10,30 @@ let sec = 0;
 
 let interval;
 
-start.addEventListener("click", function () {
+start.addEventListener("click", starter);
+
+function starter() {
   interval = setInterval(function () {
     if (sec < 59) {
       sec += 1;
-      secs.innerHTML = sec < 10 ? " 0" + sec : sec;
+      secs.innerHTML = sec < 10 ? `0${sec}` : sec;
     } else {
       sec = 0;
-      secs.innerHTML = sec < 10 ? " 0" + sec : sec;
+      secs.innerHTML = sec < 10 ? `0${sec}` : sec;
       if (min < 59) {
         min += 1;
-        mins.innerHTML = min < 10 ? "0" + min + ":" : min + ":";
+        mins.innerHTML = min < 10 ? `0${min} : ` :`${min}:`;
       } else {
+        min = 0;
         hour += 1;
-        hours.innerHTML = hour < 10 ? "0" + hour + ":" : hour + ":";
+        hours.innerHTML = hour < 10 ? `0${hour} : `:`${hour}:`;
       }
     }
-  }, 1000);
+  }, 1);
 
   start.style.pointerEvents = "none";
-});
+}
+
 
 stop.addEventListener("click", function () {
   clearInterval(interval);
