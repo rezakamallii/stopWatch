@@ -29,15 +29,15 @@ function starter() {
         hours.innerHTML = hour < 10 ? `0${hour} : `:`${hour}:`;
       }
     }
-  }, 1);
+  }, 1000);
 
-  start.style.pointerEvents = "none";
+  
 }
 
 
 stop.addEventListener("click", function () {
   clearInterval(interval);
-  start.style.pointerEvents = "visible";
+  
 });
 
 reset.addEventListener("click", function () {
