@@ -1,12 +1,12 @@
 let start = document.querySelector(".start");
 let stop = document.querySelector(".stop");
 let reset = document.querySelector(".reset");
-let hours = document.querySelector(".hour");
 let mins = document.querySelector(".min");
 let secs = document.querySelector(".sec");
-let hour = 0;
+let mils = document.querySelector(".mil");
 let min = 0;
 let sec = 0;
+let mil = 0;
 
 let interval;
 
@@ -14,22 +14,22 @@ start.addEventListener("click", starter);
 
 function starter() {
   interval = setInterval(function () {
-    if (sec < 59) {
-      sec += 1;
-      secs.innerHTML = sec < 10 ? `0${sec}` : sec;
+    if (mil < 99) {
+      mil += 1;
+      mils.innerHTML = mil < 10 ? `0${mil}` : mil;
     } else {
-      sec = 0;
-      secs.innerHTML = sec < 10 ? `0${sec}` : sec;
-      if (min < 59) {
+      mil = 0;
+      mils.innerHTML = mil < 10 ? `0${mil}` : mil;
+      if (sec < 59) {
+        sec += 1;
+        secs.innerHTML = sec < 10 ? `0${sec} : ` : `${sec}:`;
+      } else {
+        sec = 0;
         min += 1;
         mins.innerHTML = min < 10 ? `0${min} : ` : `${min}:`;
-      } else {
-        min = 0;
-        hour += 1;
-        hours.innerHTML = hour < 10 ? `0${hour} : ` : `${hour}:`;
       }
     }
-  }, 1000);
+  }, 10);
 }
 
 stop.addEventListener("click", () => {
