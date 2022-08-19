@@ -22,11 +22,11 @@ function starter() {
       mils.innerHTML = mil < 10 ? `0${mil}` : mil;
       if (sec < 59) {
         sec += 1;
-        secs.innerHTML = sec < 10 ? `0${sec} : ` : `${sec}:`;
+        secs.innerHTML = sec < 10 ? `0${sec}: ` : `${sec}:`;
       } else {
         sec = 0;
         min += 1;
-        mins.innerHTML = min < 10 ? `0${min} : ` : `${min}:`;
+        mins.innerHTML = min < 10 ? `0${min}: ` : `${min}:`;
       }
     }
   }, 10);
@@ -34,6 +34,7 @@ function starter() {
 
 stop.addEventListener("click", () => {
   clearInterval(interval);
+  start.pointerEvents = "visible";
 });
 
 reset.addEventListener("click", () => {
