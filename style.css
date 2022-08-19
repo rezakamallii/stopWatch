@@ -8,23 +8,16 @@ body {
   font-size: 16px;
   width: 100%;
   height: 100vh;
-  background-color: #f2eee3;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #bdc3c7;
-background: #0F2027; 
-background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
-
+  background: linear-gradient(to right, #050505, #232429, #050505);
 }
 .outer {
   width: 245px;
   height: 245px;
   border-radius: 50%;
-  background: #12c2e9;
-  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
-  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  background: linear-gradient(to right, #d60e32, #ade903);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +32,7 @@ background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
   align-items: center;
 }
 .text {
-  color: #2c3e50;
+  color: #2e302d;
   font-size: 30px;
 }
 
@@ -58,11 +51,11 @@ button {
   position: relative;
   width: 60px;
   height: 60px;
-  background: #f2eee3;
+  background: #e6e5e2;
   margin: 5px;
   border-radius: 50%;
-  border: 2px solid #f2eee3;
-  color: #203A43;
+  border: 2px solid #e6e5e2;
+  color: #203a43;
   font-size: 15px;
 }
 
@@ -76,7 +69,7 @@ button:after {
   z-index: -1;
   margin: -7px;
   border-radius: inherit;
-  background-image: linear-gradient(90deg, #f12711, #f5af19);
+  background-image: linear-gradient(90deg, #399cfc, #fe6a77);
 }
 
 button:hover {
