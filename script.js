@@ -30,13 +30,15 @@ function starter() {
       }
     }
   }, 10);
+  start.style.pointerEvents = "none";
 }
 
 stop.addEventListener("click", () => {
   clearInterval(interval);
-  start.pointerEvents = "visible";
+  start.style.pointerEvents = "visible";
 });
 
 reset.addEventListener("click", () => {
   location.reload();
 });
+
